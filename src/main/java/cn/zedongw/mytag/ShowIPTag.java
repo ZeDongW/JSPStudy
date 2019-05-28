@@ -27,6 +27,8 @@ public class ShowIPTag extends SimpleTagSupport {
 
         JspWriter out = pageContext.getOut();
 
-        out.write("是用自定义标签，当前IP为：" + remoteHost);
+        out.write("是用自定义标签，当前IP为：" + remoteHost + "<br>");
+        out.write("userName：" + request.getParameter("userName") + "<br>");
+        out.write("passWord：" + request.getParameter("passWord") + "<br>");
     }
 }
